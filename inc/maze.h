@@ -39,6 +39,8 @@ void closeSDL(SDL_Window *window, SDL_Renderer *renderer);
 void drawWalls(SDL_Renderer *renderer, SDL_Texture *skyTexture, SDL_Texture *wallTexture, SDL_Texture *floorTexture);
 void miniMap(SDL_Renderer *renderer);
 void handleInput(void);
+void moveForwardBackward(void);
+void rotateLeftRight(void);
 void rotateCamera(double angle);
 void loadTextures(SDL_Renderer *renderer, SDL_Texture **skyTexture, SDL_Texture **floorTexture, SDL_Texture **wallTexture);
 

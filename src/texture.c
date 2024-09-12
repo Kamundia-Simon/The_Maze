@@ -7,7 +7,8 @@
  * @floorTexture: Pointer to the floor texture
  * @wallTexture: Pointer to the wall texture
  */
-void loadTextures(SDL_Renderer *renderer, SDL_Texture **skyTexture, SDL_Texture **floorTexture, SDL_Texture **wallTexture)
+void loadTextures(SDL_Renderer *renderer, SDL_Texture **skyTexture,
+		SDL_Texture **floorTexture, SDL_Texture **wallTexture)
 {
 	/*SkyTexture*/
 	*skyTexture = IMG_LoadTexture(renderer, "img/sky.png");

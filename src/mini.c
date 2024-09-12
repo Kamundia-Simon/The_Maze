@@ -1,17 +1,19 @@
 #include "../inc/maze.h"
 
-bool showMap = true;
-
 /**
  * miniMap - draws a mini map of the maze
+ * @renderer: points to render
  */
 void miniMap(SDL_Renderer *renderer)
 {
-	/*Scale Parameters for the minimap*/
-	int mapScale = 10;
-	/*Position mini-map at the top left corner of the screen*/
-	int offsetX = 10;
-	int offsetY = 10;
+	bool showMap = true;
+
+	if (!showMap)
+		return;
+	/*Minimap settings*/
+	int mapScale = 10; /*Scale for minimap*/
+	int offsetX = 10; /*Offset on left edge of screen*/
+	int offsetY = 10; /* Offset on top edge of screen*/
 
 	for (int y = 0; y < MAP_HEIGHT; y++)
 	{
@@ -31,14 +33,12 @@ void miniMap(SDL_Renderer *renderer)
 			SDL_RenderFillRect(renderer, &rect);
 		}
 	}
-
 	/* Player Position on mini-Map */
 	SDL_Rect playerRect = {offsetX + mapScale - 2, offsetY
 		+ posY * mapScale - 2, 4, 4};
 
 	SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
 	SDL_RenderFillRect(renderer, &playerRect);
-
 	/* Draw line of sight */
 	 SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
 	 SDL_RenderDrawLine(renderer,
