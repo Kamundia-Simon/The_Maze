@@ -1,6 +1,9 @@
 #ifndef MAZE_H
 #define MAZE_H
 
+#define SCREEN_WIDTH 1280
+#define SCREEN_HEIGHT 800
+
 #include <SDL2/SDL.h>
 #include <stdbool.h>
 #include <stdio.h>
