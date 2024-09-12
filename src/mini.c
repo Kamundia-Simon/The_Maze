@@ -1,8 +1,11 @@
-#include "..inc/maze.h"
+#include "../inc/maze.h"
 
 bool showMap = true;
 SDL_Renderer *renderer = NULL;
 
+/**
+ * miniMap - draws a mini map of the maze
+ */
 void miniMap(void)
 {
 	/*Scale Parameters for the minimap*/
@@ -15,7 +18,9 @@ void miniMap(void)
 	{
 		for (int x = 0; x < MAP_WIDTH; x++)
 		{
-			SDL_Rect rect = {offetX + x * mapScale, offsetY + y *mapScale, mapScale, mapScale};
+			SDL_Rect rect = {offsetX + x * mapScale, offsetY +
+				y * mapScale, mapScale, mapScale};
+
 			if (map[x][y] > 0)
 			{
 				SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
@@ -29,14 +34,17 @@ void miniMap(void)
 	}
 
 	/* Player Position on mini-Map */
-	SDL_Rect playerRect = {offset X + mapscale - 2, offsetY + posY * mapscale -2, 4, 4};
-	SDL_SetRenderDrawColor = (renderer, 255, 0, 0, 255);
-	SDL_RenderFillRecr(renderer, &playerRect);
+	SDL_Rect playerRect = {offsetX + mapScale - 2, offsetY
+		+ posY * mapScale - 2, 4, 4};
+
+	SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+	SDL_RenderFillRect(renderer, &playerRect);
 
 	/* Draw line of sight */
 	 SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
 	 SDL_RenderDrawLine(renderer,
-                       offsetX + posX * mapScale,
-                       offsetY + posY * mapScale,
-                       offsetX + (posX + dirX * 5) * mapScale,
-                       offsetY + (posY + dirY * 5) * mapScale);
+			 offsetX + posX * mapScale,
+			 offsetY + posY * mapScale,
+			 offsetX + (posX + dirX * 5) * mapScale,
+			 offsetY + (posY + dirY * 5) * mapScale);
+}
