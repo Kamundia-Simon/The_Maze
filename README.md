@@ -31,19 +31,19 @@ The third step is to run the maze using the command:
 
 ### How to play
 The controls in this game are:
-**W** and **UP ARROW KEY** - To move forward.
-**S** and **DOWN ARROW KEY** - To move backwards.
-**A** and **LEFT ARROW KEY** - To move to the left.
-**D** and **RIGHT ARROW KEY** - To move to the right.
+- **W** and **UP ARROW KEY** - To move forward.
+- **S** and **DOWN ARROW KEY** - To move backwards.
+- **A** and **LEFT ARROW KEY** - To move to the left.
+- **D** and **RIGHT ARROW KEY** - To move to the right.
 
 The game's goal is to navigate the maze and reach the end. THe game starts with the player at the beginning of the maze. The game has a mini map which allows the player to determine how they will navigate through the game.
 
 ## Features to be deployed
 The following features are yet to be implemented into the game:
--Weather
--Enemies
--Weapons
--Multiple levels
+- Weather
+- Enemies
+- Weapons
+- Multiple levels
 
 
 ## Screenshots
@@ -58,5 +58,4 @@ The following features are yet to be implemented into the game:
 - [Raycasting](https://lodev.org/cgtutor/raycasting.html)
 - [Ray-Casting Tutorial](https://permadi.com/1996/05/ray-casting-tutorial-table-of-contents/)
 - [SDL2 tutorials: Lazy Foo’ Productions](https://lazyfoo.net/tutorials/SDL/index.php)
-
 
