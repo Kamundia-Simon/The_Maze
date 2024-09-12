@@ -1,12 +1,11 @@
 #include "../inc/maze.h"
 
 bool showMap = true;
-SDL_Renderer *renderer = NULL;
 
 /**
  * miniMap - draws a mini map of the maze
  */
-void miniMap(void)
+void miniMap(SDL_Renderer *renderer)
 {
 	/*Scale Parameters for the minimap*/
 	int mapScale = 10;

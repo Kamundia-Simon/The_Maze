@@ -30,7 +30,7 @@ extern bool showMap;
 bool SDL(SDL_Window **window, SDL_Renderer **renderer);
 void closeSDL(SDL_Window *window, SDL_Renderer *renderer);
 void drawWalls(SDL_Renderer *renderer);
-void miniMap(void);
+void miniMap(SDL_Renderer *renderer);
 void handleInput(void);
 void rotateCamera(double angle);
 
