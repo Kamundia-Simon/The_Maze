@@ -11,7 +11,7 @@ bool SDL(SDL_Window **window, SDL_Renderer **renderer)
 	/*Initialize SDL*/
 	if (SDL_Init(SDL_INIT_VIDEO) < 0)
 	{
-		printf("SDL could not initialize SDL_Error: %s\n" SDL_GetError());
+		printf("SDL could not initialize SDL_Error: %s\n", SDL_GetError());
 		return (false);
 	}
 	/*Create window*/
@@ -19,7 +19,7 @@ bool SDL(SDL_Window **window, SDL_Renderer **renderer)
 			SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 	if (!*window)
 	{
-		printf("Could not create window SDL_Error: %s\n" SDL_GetError());
+		printf("Could not create window SDL_Error: %s\n", SDL_GetError());
 		return (false);
 	}
 	else
@@ -35,7 +35,7 @@ bool SDL(SDL_Window **window, SDL_Renderer **renderer)
 
 /**
  * main - The maze entry point
- * Return: 0 or 1
+ * Return: 0 if success otherwise 1
  */
 
 int main(void)
@@ -65,12 +65,13 @@ int main(void)
 
 		/*Add functions*/
 		SDL_Delay(16);
-		closeSDL();
+		drawWalls(renderer);
+		SDL_RenderPresent(renderer);
 	}
 
 	closeSDL(window, renderer);
 	return (0);
-
+}
 /**
  * closeSDL - clearup memory
  * @window: pointer to window
