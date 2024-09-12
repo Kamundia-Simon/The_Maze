@@ -7,7 +7,7 @@
 void rotateCamera(double angle)
 {
 	/*Rotate direction*/
-	double oldDirX = dirX
+	double oldDirX = dirX;
 
 	dirX = dirX * cos(angle) - dirY * sin(angle);
 	dirY = oldDirX * sin(angle) + dirY * cos(angle);
