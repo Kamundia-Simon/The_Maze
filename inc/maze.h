@@ -26,7 +26,7 @@ extern double dirX, dirY;
 extern double planeX, planeY;
 extern bool showMap;
 
-
+/*functions*/
 bool SDL(SDL_Window **window, SDL_Renderer **renderer);
 void closeSDL(SDL_Window *window, SDL_Renderer *renderer);
 void drawWalls(SDL_Renderer *renderer);
