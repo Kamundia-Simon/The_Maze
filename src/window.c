@@ -4,7 +4,7 @@
  * @window: pointer to window
  * @renderer: pointer to renderer
  * Return: true in successfull otherwise false
-*/
+ */
 
 bool SDL(SDL_Window **window, SDL_Renderer **renderer)
 {
@@ -12,6 +12,12 @@ bool SDL(SDL_Window **window, SDL_Renderer **renderer)
 	if (SDL_Init(SDL_INIT_VIDEO) < 0)
 	{
 		printf("SDL could not initialize SDL_Error: %s\n", SDL_GetError());
+		return (false);
+	}
+	/*initialize textures*/
+	if (!(IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG))
+	{
+		printf("SDL could not initialize textures SDL_Error: %s\n", SDL_GetError());
 		return (false);
 	}
 	/*Create window*/
@@ -42,43 +48,49 @@ int main(void)
 {
 	SDL_Window *window = NULL;
 	SDL_Renderer *renderer = NULL;
+	SDL_Texture *skyTexture = NULL;
+	SDL_Texture *floorTexture = NULL;
+	SDL_Texture *wallTexture = NULL;
 
 	if (!SDL(&window, &renderer))
 	{
 		printf("Initialisation failed\n");
 		return (1);
 	}
+	loadTextures(renderer, &skyTexture, &floorTexture, &wallTexture);
+
 	bool quit = false;
 	SDL_Event e;
 
 	while (!quit)
 	{
 		while (SDL_PollEvent(&e) != 0)
-
 		{
 			if (e.type == SDL_QUIT)
 			{
 				quit = true;
 			}
 
+
+
+			/*Add functions*/
+			SDL_Delay(16);
+			drawWalls(renderer, skyTexture, wallTexture, floorTexture);
+			miniMap(renderer);
+			SDL_RenderPresent(renderer);
+			handleInput();
 		}
 
-		/*Add functions*/
-		SDL_Delay(16);
-		drawWalls(renderer);
-		miniMap(renderer);
-		SDL_RenderPresent(renderer);
-		handleInput();
+		closeSDL(window, renderer);
+		return (0);
 	}
-
-	closeSDL(window, renderer);
-	return (0);
 }
+
 /**
  * closeSDL - clearup memory
  * @window: pointer to window
  * @renderer: pointer to renderer
-*/
+ */
 
 void closeSDL(SDL_Window *window, SDL_Renderer *renderer)
 {
