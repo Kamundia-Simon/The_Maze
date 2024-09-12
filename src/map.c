@@ -1,8 +1,7 @@
 #include "../inc/maze.h"
 
 /* Map definition*/
-int map[MAP_WIDTH][MAP_HEIGHT] = 
-{
+int map[MAP_WIDTH][MAP_HEIGHT] = {
 	{1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	{1, 0, 0, 0, 0, 0, 2, 0, 0, 1},
 	{1, 0, 1, 0, 1, 1, 1, 0, 0, 1},
