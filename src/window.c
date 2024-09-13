@@ -70,8 +70,7 @@ int main(void)
 			{
 				quit = true;
 			}
-
-
+		}
 
 			/*Add functions*/
 			SDL_Delay(16);
@@ -79,11 +78,9 @@ int main(void)
 			miniMap(renderer);
 			SDL_RenderPresent(renderer);
 			handleInput();
-		}
-
-		closeSDL(window, renderer);
-		return (0);
 	}
+	closeSDL(window, renderer);
+	return (0);
 }
 
 /**

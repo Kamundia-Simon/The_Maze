@@ -34,16 +34,16 @@ void miniMap(SDL_Renderer *renderer)
 		}
 	}
 	/* Player Position on mini-Map */
-	SDL_Rect playerRect = {offsetX + mapScale - 2, offsetY
+	SDL_Rect playerRect = {offsetX + posX * mapScale - 2, offsetY
 		+ posY * mapScale - 2, 4, 4};
 
 	SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
 	SDL_RenderFillRect(renderer, &playerRect);
 	/* Draw line of sight */
-	 SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
-	 SDL_RenderDrawLine(renderer,
-			 offsetX + posX * mapScale,
-			 offsetY + posY * mapScale,
-			 offsetX + (posX + dirX * 5) * mapScale,
-			 offsetY + (posY + dirY * 5) * mapScale);
+	SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+	SDL_RenderDrawLine(renderer,
+			offsetX + posX * mapScale,
+			offsetY + posY * mapScale,
+			offsetX + (posX + dirX * 5) * mapScale,
+			offsetY + (posY + dirY * 5) * mapScale);
 }
