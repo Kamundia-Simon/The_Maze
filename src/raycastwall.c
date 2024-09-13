@@ -113,7 +113,7 @@ void drawWalls(SDL_Renderer *renderer, SDL_Texture *skyTexture, SDL_Texture *wal
 		if (side == 0)
 			wallX = posY + perpWallDist * rayDirY;
 		else
-			wallX = posX + perpWallDist * rayDirY;
+			wallX = posX + perpWallDist * rayDirX;
 		wallX -= floor(wallX);
 
 		/*position and cast wall*/
