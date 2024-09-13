@@ -6,7 +6,7 @@
  * @skyTexture: pointer to skyTexture
  * @wallTexture: pointer to wallTexture
  * @floorTexture: pointer to floorTexture
- */
+*/
 void drawWalls(SDL_Renderer *renderer, SDL_Texture *skyTexture, SDL_Texture *wallTexture, SDL_Texture *floorTexture)
 {
 	if (skyTexture)

@@ -19,6 +19,7 @@
 extern SDL_Window *window;
 extern SDL_Renderer *renderer;
 
+
 /* Define Map*/
 extern int map[MAP_WIDTH][MAP_HEIGHT];
 

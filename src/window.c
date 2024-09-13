@@ -4,7 +4,7 @@
  * @window: pointer to window
  * @renderer: pointer to renderer
  * Return: true in successfull otherwise false
- */
+*/
 
 bool SDL(SDL_Window **window, SDL_Renderer **renderer)
 {
