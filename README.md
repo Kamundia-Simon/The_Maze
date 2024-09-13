@@ -17,7 +17,7 @@ sudo apt-get install libsdl2-image-dev
 ### Running the game
 The first step is to clone the following repository:
 ```bash
-
+https://github.com/Kamundia-Simon/The_Maze.git
 ```
 The second step is to compile all the '.c' files using the command:
 ```bash
@@ -47,6 +47,10 @@ The following features are yet to be implemented into the game:
 
 
 ## Screenshots
+![Maze appearance](/img/mazescreenshot.jpeg)
+![Minimap appearance](/img/minimap.jpeg)
+
+<b align="center">📍This project is still a work in progress and will be improved on in the future</b>
 
 
 ## AUTHORS
