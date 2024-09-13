@@ -47,8 +47,8 @@ The following features are yet to be implemented into the game:
 
 
 ## Screenshots
-![Maze appearance](/img/mazescreenshot.jpeg)
-![Minimap appearance](/img/minimap.jpeg)
+![Maze appearance](img/mazescreenshot.jpeg)
+![Minimap appearance](img/minimap.jpeg)
 
 <b align="center">📍This project is still a work in progress and will be improved on in the future</b>
 
@@ -62,4 +62,3 @@ The following features are yet to be implemented into the game:
 - [Raycasting](https://lodev.org/cgtutor/raycasting.html)
 - [Ray-Casting Tutorial](https://permadi.com/1996/05/ray-casting-tutorial-table-of-contents/)
 - [SDL2 tutorials: Lazy Foo’ Productions](https://lazyfoo.net/tutorials/SDL/index.php)
-
